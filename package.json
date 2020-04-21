@@ -1,0 +1,35 @@
+{
+  "name": "joired",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "css-build": "node-sass --omit-source-map-url sass/bulma.scss public/css/bulma.css",
+    "css-watch": "npm run css-build -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanctusz/joired.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanctusz/joired/issues"
+  },
+  "homepage": "https://github.com/Sanctusz/joired#readme",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.10"
+  },
+  "devDependencies": {
+    "bulma": "^0.8.2",
+    "eslint": "^6.8.0",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.3"
+  }
+}
