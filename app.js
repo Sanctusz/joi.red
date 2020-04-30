@@ -14,8 +14,16 @@ app.get("/", function (req, res) {
 	res.render("index.ejs");
 });
 
-app.get("/testing", function (req, res) {
-	res.render("testing.ejs");
+app.get("/about", function (req, res) {
+	res.render("about.ejs");
+});
+
+app.get("/resume", function (req, res) {
+	res.render("resume.ejs");
+});
+
+app.get("/contact", function (req, res) {
+	res.render("contact.ejs");
 });
 
 module.exports = app;

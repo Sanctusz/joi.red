@@ -1,7 +1,35 @@
 @charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 $red: rgb(187, 14, 14);
 
 $danger: $red;
+$family-sans-serif: "Source Sans Pro", sans-serif;
+
+.slide-in-from-left {
+    position: relative;
+    left: -50vw;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+.slide-in-from-right {
+    position: relative;
+    right: -50vw;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
 
 @import "../node_modules/bulma/bulma.sass";
