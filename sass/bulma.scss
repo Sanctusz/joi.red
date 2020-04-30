@@ -8,27 +8,65 @@ $family-sans-serif: "Source Sans Pro", sans-serif;
 .slide-in-from-left {
     position: relative;
     left: -50vw;
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slide 0.5s forwards;
-    animation-delay: 2s;
+    -webkit-animation: slideLeft 1s forwards;
+    -webkit-animation-delay: 0.5s;
+    animation: slideLeft 1s forwards;
+    animation-delay: 0.5s;
 }
 
 .slide-in-from-right {
     position: relative;
     right: -50vw;
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slide 0.5s forwards;
-    animation-delay: 2s;
+    -webkit-animation: slideRight 1s forwards;
+    -webkit-animation-delay: 0.5s;
+    animation: slideRight 1s forwards;
+    animation-delay: 0.5s;
 }
 
-@-webkit-keyframes slide {
-    100% { left: 0; }
+@-webkit-keyframes slideLeft {
+	50% {
+		left: 1.5vw;
+	}
+    100% { 
+		left: 0;
+	}
 }
 
-@keyframes slide {
-    100% { left: 0; }
+@keyframes slideLeft {
+	50% {
+		left: 1.5vw;
+	}
+    100% {
+		left: 0;
+	}
+}
+
+@-webkit-keyframes slideRight {
+    100% { 
+		right: 0;
+	}
+}
+
+@keyframes slideRight {
+    100% {
+		right: 0;
+	}
+}
+
+.scale-out {
+    animation: scale-out-in 2s;
+}
+
+@keyframes scale-out-in {
+    0% {
+		transform: scale(0.025);
+    }
+    80% {
+        transform: scale(1.05);
+    }
+    100% {
+		transform: scale(1.00);
+    }
 }
 
 
