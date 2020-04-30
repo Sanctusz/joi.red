@@ -9,4 +9,4 @@ It's currently a work in progress.
 ## License
 
 Universal
-[CC0-1.0]
+[CC0-1.0](./LICENSE).
