@@ -42,12 +42,18 @@ $family-sans-serif: "Source Sans Pro", sans-serif;
 }
 
 @-webkit-keyframes slideRight {
+  50% {
+		right: 1.5vw;
+	}
     100% { 
 		right: 0;
 	}
 }
 
 @keyframes slideRight {
+  50% {
+		right: 1.5vw;
+	}
     100% {
 		right: 0;
 	}

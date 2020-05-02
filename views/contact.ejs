@@ -10,30 +10,96 @@
 			<%- include("partials/_nav.ejs") %>
 		</div>
 		<div class="hero-body has-text-centered">
-			<div class="container slide-in-from-left">
-				<div class="field">
-					<div class="control">
-						<h1 class="subtitle has-text-weight-medium">
-							&NonBreakingSpace;&NonBreakingSpace;
-							<span class="has-text-white">joi</span><span class="has-text-danger">.</span><span
-								class="has-text-white">red</span>
-						</h1>
-						<h1 class="title has-text-weight-light is-size-1 has-text-danger"><strong
-								class="has-text-weight-medium has-text-white">.</strong>CONTACT</h1>
-					</div>
-				</div>
-				<div class="field">
-					<div class="control">
-						<div class="buttons is-paddingless is-marginless has-addons">
-							<a href="/resume"
-								class="button is-size-5 has-text-weight-bold is-white has-text-danger is-outlined">RESUME</a>
-							<a href="/contact"
-								class="button is-size-5 has-text-weight-bold is-white has-text-danger is-outlined">CONTACT</a>
+			<div class="container">
+				<div class="columns is-vcentered">
+					<div class="column is-one-third">
+						<div class="container slide-in-from-left">
+							<div class="field">
+								<div class="control">
+									<h1 class="subtitle has-text-weight-medium">
+										&NonBreakingSpace;&NonBreakingSpace;
+										<span class="has-text-white">joi</span><span class="has-text-danger">.</span><span
+											class="has-text-white">red</span>
+									</h1>
+									<h1 class="title has-text-weight-light is-size-1 has-text-danger"><strong
+											class="has-text-weight-medium has-text-white">.</strong>CONTACT</h1>
+								</div>
+							</div>
+							<div class="field">
+								<div class="control">
+									<div class="buttons is-paddingless is-marginless has-addons">
+										<a href="/resume"
+											class="button is-size-5 has-text-weight-bold is-white has-text-danger is-outlined">RESUME</a>
+										<a href="/contact"
+											class="button is-size-5 has-text-weight-bold is-white has-text-danger is-outlined">CONTACT</a>
+									</div>
+									<p class="subtitle has-text-white">
+										Creative <strong class="has-text-danger">solutions</strong> to your <strong
+											class="has-text-danger">problems</strong>!
+									</p>
+								</div>
+							</div>
 						</div>
-						<p class="subtitle has-text-white">
-							Creative <strong class="has-text-danger">solutions</strong> to your <strong
-								class="has-text-danger">problems</strong>!
-						</p>
+					</div>
+					<div class="column">
+						<div class="container slide-in-from-right">
+							<div class="columns">
+								<div class="column is-two-thirds">
+									<form action='/contact' method="POST" class="box has-background-black"
+										style="border-style: solid; border-width: 1px; border-color: white;">
+										<div class="container has-text-weight-bold title has-text-white">Let's Talk</div>
+										<div class="field">
+											<div class="control">
+												<p class="has-text-white is-size-5 has-text-weight-medium">Name:</p>
+												<input type="text" class="input is-danger has-background-black has-text-white">
+											</div>
+										</div>
+										<div class="field">
+											<div class="control">
+												<p class="has-text-white is-size-5 has-text-weight-medium">Email Address:</p>
+												<input type="email" class="input is-danger has-background-black has-text-white">
+											</div>
+										</div>
+										<div class="field">
+											<div class="control">
+												<p class="has-text-white is-size-5 has-text-weight-medium">Subject:</p>
+												<input type="text" class="input is-danger has-background-black has-text-white">
+											</div>
+										</div>
+										<div class="field">
+											<div class="control">
+												<p class="has-text-white is-size-5 has-text-weight-medium">Message:</p>
+												<textarea class="textarea is-danger has-background-black has-text-white"></textarea>
+											</div>
+										</div>
+										<div class="field">
+											<div class="control has-text-right">
+												<button type="submit"
+													class="button is-size-5 has-text-weight-bold is-white has-text-danger is-outlined">SEND</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="column is-one-third">
+									<div class="list is-hoverablebox has-background-black"
+										style="border-style: solid; border-width: 1px; border-color: white;">
+										<a class="list-item has-background-black has-text-danger">
+											jsingason@gmail.com
+										</a>
+										<a href="https://www.github.com/Sanctusz" class="list-item has-background-black has-text-danger">
+											GitHub
+										</a>
+										<a href="https://www.linkedin.com/in/jsingason"
+											class="list-item has-background-black has-text-danger">
+											LinkedIn
+										</a>
+										<a href="https://yoppe.itch.io/" class="list-item has-background-black has-text-danger">
+											Itch.io
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
