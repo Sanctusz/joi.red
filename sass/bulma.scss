@@ -7,20 +7,66 @@ $family-sans-serif: "Source Sans Pro", sans-serif;
 
 .slide-in-from-left {
     position: relative;
-    left: -50vw;
+    left: -100vw;
     -webkit-animation: slideLeft 1s forwards;
-    -webkit-animation-delay: 0.5s;
+    -webkit-animation-delay: 0.1s;
     animation: slideLeft 1s forwards;
-    animation-delay: 0.5s;
+    animation-delay: 0.1s;
 }
 
 .slide-in-from-right {
     position: relative;
-    right: -50vw;
+    right: -100vw;
     -webkit-animation: slideRight 1s forwards;
-    -webkit-animation-delay: 0.5s;
+    -webkit-animation-delay: 0.1s;
     animation: slideRight 1s forwards;
-    animation-delay: 0.5s;
+    animation-delay: 0.1s;
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn 1s forwards;
+  -webkit-animation-delay: 0.1s;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.1s;
+}
+
+.fade-in-continuous {
+  opacity: 0.1;
+  -webkit-animation: fadeInContinuous 2s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation: fadeInContinuous 2s infinite;
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes fadeInContinuous {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+	}
+}
+
+@keyframes fadeInContinuous {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+  100% { 
+		left: 1;
+	}
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+	}
 }
 
 @-webkit-keyframes slideLeft {
@@ -74,6 +120,5 @@ $family-sans-serif: "Source Sans Pro", sans-serif;
 		transform: scale(1.00);
     }
 }
-
 
 @import "../node_modules/bulma/bulma.sass";
