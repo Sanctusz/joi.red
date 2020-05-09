@@ -50,7 +50,42 @@
 	<section class="hero is-halfheight has-background-black-bis">
 		<div class="hero-body has-text-centered">
 			<div class="container">
-				Skills & Stuff
+				<div class="columns">
+					<div class="column"></div>
+					<div class="column is-three-fifths">
+						<% for (let i = 0; i < tableContent.skills.length; i++) { %>
+						<div class="table-container box has-background-black">
+							<table class="table is-hoverable is-fullwidth has-background-black">
+								<thead>
+									<tr>
+										<th class="subtitle has-text-weight-semibold has-text-white has-text-left">
+											<%= tableContent.categories[i] %></th>
+										<th class="subtitle has-text-weight-semibold has-text-white has-text-right">Proficiency</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% for (let j = 0; j < tableContent.skills[i].length; j++) { %>
+									<tr>
+										<td class="has-text-danger has-text-weight-semibold has-text-left"><%= tableContent.skills[i][j] %>
+										<td class="has-text-danger has-text-weight-semibold has-text-right">
+											<% for (let s = 0; s < 5; s++) { %>
+											<% if (tableContent.stars[i][j] > s) { %>
+											<i class="fas fa-star"></i>
+											<% } else { %>
+											<i class="far fa-star"></i>
+											<% } %>
+											<% } %>
+										</td>
+										</td>
+									</tr>
+									<% } %>
+								</tbody>
+							</table>
+						</div>
+						<% } %>
+					</div>
+					<div class="column"></div>
+				</div>
 			</div>
 		</div>
 	</section>
