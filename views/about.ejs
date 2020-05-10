@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<%- include("partials/_head.ejs", { title: "About"}) %>
+
+<body>
+	<!-- hero -->
+	<section class="hero is-fullheight has-background-black">
+		<div class="hero-head">
+			<%- include("partials/_nav.ejs") %>
+		</div>
+		<div class="hero-body has-text-centered">
+			<div class="container">
+				<div class="columns is-vcentered">
+					<div class="column is-one-third"></div>
+					<div class="column is-one-third fade-in">
+						<div class="field">
+							<div class="control">
+								<h1 class="subtitle has-text-weight-medium has-text-centered">
+									&NonBreakingSpace;&NonBreakingSpace;
+									<span class="has-text-white">joi</span><span class="has-text-danger">.</span><span
+										class="has-text-white">red</span>
+								</h1>
+								<h1 class="title has-text-weight-light is-size-1 has-text-danger has-text-centered"><strong
+										class="has-text-weight-medium has-text-white">.</strong>ABOUT</h1>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<h1 class="title has-text-white">Hi there<strong class="has-text-danger">!</strong></h1>
+								<p class="subtitle has-text-white">
+									My name is <strong class="has-text-danger">Jóhann</strong>, I'm about to graduate from the University
+									of Reykjavík in Iceland in June. I'm excited to work on challenging real world projects.
+								</p>
+							</div>
+						</div>
+						<div class="container fade-in-continuous">
+							<i class="fas fa-long-arrow-alt-down has-text-danger is-size-1"></i>
+						</div>
+					</div>
+					<div class="column is-one-third"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /hero -->
+
+	<!-- hero -->
+	<section class="hero is-halfheight has-background-black-bis">
+		<div class="hero-body has-text-centered">
+			<div class="container">
+				<div class="columns">
+					<div class="column"></div>
+					<div class="column is-three-fifths">
+						<% for (let i = 0; i < tableContent.skills.length; i++) { %>
+						<div class="table-container box has-background-black">
+							<table class="table is-hoverable is-fullwidth has-background-black">
+								<thead>
+									<tr>
+										<th class="subtitle has-text-weight-semibold has-text-white has-text-left">
+											<%= tableContent.categories[i] %></th>
+										<th class="subtitle has-text-weight-semibold has-text-white has-text-right">Proficiency</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% for (let j = 0; j < tableContent.skills[i].length; j++) { %>
+									<tr>
+										<td class="has-text-danger has-text-weight-semibold has-text-left"><%= tableContent.skills[i][j] %>
+										<td class="has-text-danger has-text-weight-semibold has-text-right">
+											<% for (let s = 0; s < 5; s++) { %>
+											<% if (tableContent.stars[i][j] > s) { %>
+											<i class="fas fa-star"></i>
+											<% } else { %>
+											<i class="far fa-star"></i>
+											<% } %>
+											<% } %>
+										</td>
+										</td>
+									</tr>
+									<% } %>
+								</tbody>
+							</table>
+						</div>
+						<% } %>
+					</div>
+					<div class="column"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /hero -->
+	<script src="/javascript/resumeModal.js"></script>
+</body>
+
+
+</html>

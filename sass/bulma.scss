@@ -1,6 +1,124 @@
 @charset "utf-8";
-@import "../node_modules/bulma/bulma.sass";
-
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 $red: rgb(187, 14, 14);
 
 $danger: $red;
+$family-sans-serif: "Source Sans Pro", sans-serif;
+
+.slide-in-from-left {
+    position: relative;
+    left: -100vw;
+    -webkit-animation: slideLeft 1s forwards;
+    -webkit-animation-delay: 0.1s;
+    animation: slideLeft 1s forwards;
+    animation-delay: 0.1s;
+}
+
+.slide-in-from-right {
+    position: relative;
+    right: -100vw;
+    -webkit-animation: slideRight 1s forwards;
+    -webkit-animation-delay: 0.1s;
+    animation: slideRight 1s forwards;
+    animation-delay: 0.1s;
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn 1s forwards;
+  -webkit-animation-delay: 0.1s;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.1s;
+}
+
+.fade-in-continuous {
+  opacity: 0.1;
+  -webkit-animation: fadeInContinuous 2s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation: fadeInContinuous 2s infinite;
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes fadeInContinuous {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+	}
+}
+
+@keyframes fadeInContinuous {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+  100% { 
+		left: 1;
+	}
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideLeft {
+	50% {
+		left: 1.5vw;
+	}
+    100% { 
+		left: 0;
+	}
+}
+
+@keyframes slideLeft {
+	50% {
+		left: 1.5vw;
+	}
+    100% {
+		left: 0;
+	}
+}
+
+@-webkit-keyframes slideRight {
+  50% {
+		right: 1.5vw;
+	}
+    100% { 
+		right: 0;
+	}
+}
+
+@keyframes slideRight {
+  50% {
+		right: 1.5vw;
+	}
+    100% {
+		right: 0;
+	}
+}
+
+.scale-out {
+    animation: scale-out-in 2s;
+}
+
+@keyframes scale-out-in {
+    0% {
+		transform: scale(0.025);
+    }
+    80% {
+        transform: scale(1.05);
+    }
+    100% {
+		transform: scale(1.00);
+    }
+}
+
+@import "../node_modules/bulma/bulma.sass";
