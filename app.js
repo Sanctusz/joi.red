@@ -46,4 +46,8 @@ app.get("/about", function (req, res) {
 	res.render("about.ejs", { tableContent: tableContent });
 });
 
+app.use(function (req, res) {
+	res.status(404).render("error.ejs", { error: "Are you lost? Cause this page doesn't exist.", statusCode: "404" });
+});
+
 module.exports = app;

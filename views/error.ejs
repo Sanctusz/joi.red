@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<%- include("partials/_head.ejs", { title: "Error 404"}) %>
+
+<body>
+	<!-- hero -->
+	<section class="hero is-fullheight has-background-black">
+		<div class="hero-head">
+			<%- include("partials/_nav.ejs") %>
+		</div>
+		<div class="hero-body has-text-centered">
+			<div class="container">
+				<div class="columns is-vcentered">
+					<div class="column is-one-third"></div>
+					<div class="column is-one-third fade-in">
+						<div class="field">
+							<div class="control">
+								<h1 class="subtitle has-text-weight-medium has-text-centered">
+									&NonBreakingSpace;&NonBreakingSpace;
+									<span class="has-text-white">joi</span><span class="has-text-danger">.</span><span
+										class="has-text-white">red</span>
+								</h1>
+								<h1 class="title has-text-weight-light is-size-1 has-text-danger has-text-centered"><strong
+										class="has-text-weight-medium has-text-white">.</strong>ERROR <%= statusCode %></h1>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<p class="subtitle has-text-white has-text-centered">
+									<%= error %>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="column is-one-third"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /hero -->
+</body>
+
+
+</html>
