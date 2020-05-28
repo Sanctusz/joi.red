@@ -18,6 +18,10 @@ app.get("/contact", function (req, res) {
 	res.render("contact.ejs");
 });
 
+app.get("/testads", function (req, res) {
+	res.render("testads.ejs");
+});
+
 // Build list of skills & proficiency to populate the table in About Page
 let languages = ["C#", "C++", "Java", "Python", "Dart", "Javascript", "HTML", "CSS", "SCSS"];
 let languagesStars = [4, 3, 3, 4, 4, 4, 5, 4, 3];
