@@ -57,16 +57,18 @@
 							<table class="table is-hoverable is-fullwidth has-background-black">
 								<thead>
 									<tr>
-										<th class="subtitle has-text-weight-semibold has-text-white has-text-left">
+										<th class="has-text-weight-semibold has-text-white has-text-left auto-size">
 											<%= tableContent.categories[i] %></th>
-										<th class="subtitle has-text-weight-semibold has-text-white has-text-right">Proficiency</th>
+										<th class="has-text-weight-semibold has-text-white has-text-right auto-size">Proficiency
+										</th>
 									</tr>
 								</thead>
 								<tbody>
 									<% for (let j = 0; j < tableContent.skills[i].length; j++) { %>
 									<tr>
-										<td class="has-text-danger has-text-weight-semibold has-text-left"><%= tableContent.skills[i][j] %>
-										<td class="has-text-danger has-text-weight-semibold has-text-right">
+										<td class="has-text-danger has-text-weight-semibold has-text-left auto-size">
+											<%= tableContent.skills[i][j] %>
+										<td class="has-text-danger has-text-weight-semibold has-text-right auto-size">
 											<% for (let s = 0; s < 5; s++) { %>
 											<% if (tableContent.stars[i][j] > s) { %>
 											<i class="fas fa-star"></i>

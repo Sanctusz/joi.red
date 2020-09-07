@@ -5,6 +5,11 @@ $red: rgb(187, 14, 14);
 $danger: $red;
 $family-sans-serif: "Source Sans Pro", sans-serif;
 
+.auto-size {
+  width: 50%;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+}
+
 .slide-in-from-left {
     position: relative;
     left: -100vw;

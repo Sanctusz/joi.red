@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+.auto-size {
+  width: 50%;
+  font-size: clamp(0.75rem, 1vw, 1rem); }
+
 .slide-in-from-left {
   position: relative;
   left: -100vw;
